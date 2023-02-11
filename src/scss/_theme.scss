@@ -1,0 +1,234 @@
+@use "variables";
+@use "mixins";
+@use "header";
+@use "footer";
+
+
+body {
+	background:variables.$primary-color;
+	color:variables.$secondary-color;
+  }
+
+  circle {
+    position: relative;
+    fill:variables.$secondary-color;
+    z-index: 800;
+  
+  
+  }
+  
+.darkmode {
+color:variables.$primary-color;
+background: variables.$darkmode;
+
+
+circle {
+  fill:variables.$primary-color;
+
+
+
+}
+rect{
+  fill:variables.$primary-color;
+
+}
+
+
+
+a{
+
+    color:variables.$primary-color;
+
+}
+
+a:hover, a:focus, a:active {
+  color:variables.$primary-color;
+
+     
+  @include mixins.laptop {
+    color:variables.$primary-color;
+
+
+  }
+  
+  @include mixins.desktop {
+    color:variables.$primary-color;
+
+
+  }
+}
+
+
+
+    .menu-btn{
+      color: variables.$primary-color;
+      background-color: none;
+
+
+  
+           
+    &__top{
+      
+      background-color:variables.$secondary-color;
+
+      
+
+    }
+    
+    
+    &__middle{
+   
+      background-color:variables.$secondary-color;
+
+  
+    
+    }
+    
+    &__bottom{
+     
+      background-color:variables.$secondary-color;
+     
+    }
+
+
+    &__active{
+      background: none;
+
+      @include mixins.laptop {
+        background: none;
+  
+  
+      }
+      
+      @include mixins.desktop {
+        background: none;
+  
+    
+      }
+
+      .menu-btn{
+        background-color: none;
+
+    
+  
+      }
+      
+
+    }
+    }
+
+    .menuBtn{
+      background: variables.$primary-color;
+      
+    
+    
+  }
+  
+
+    .main{
+
+    &__intro{
+
+      &__text::after {
+        content: '|';
+        animation: blink 0.9s infinite;
+        color:variables.$red;
+      }
+      
+    }
+  }
+
+ 
+
+  .overlay__open{
+
+    background-color: variables.$darkmode;
+    @include mixins.laptop {
+      background: none;
+
+
+    }
+    
+    @include mixins.desktop {
+      background: none;
+
+  
+    }
+
+  }
+
+
+  .overlay__nav__links{
+
+    &:after {
+ 
+      background:variables.$primary-color;
+   
+  }
+  }
+
+  .projects__info{
+
+    background:variables.$darkmode;
+  
+    color:variables.$primary-color;
+  }
+
+
+
+  .arrow {
+
+    color:variables.$primary-color;
+  }
+  .footer{
+    background-color:  variables.$purple ;
+
+    &__links{
+      color:variables.$primary-color;
+    }
+  }
+
+  
+}
+  .dark-mode-toggle {
+  position: relative;
+  z-index: 200;
+	color: transparent;
+	border: 2px solid currentColor;
+	//padding: 4px;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+  padding-left: 0.8rem;
+
+
+
+
+  @include mixins.tablet {
+
+   
+
+
+    svg{
+          
+    height: 40px;
+    width: 40px;
+        }
+  
+        }
+  @include mixins.laptop {
+
+   
+
+
+    svg{
+      
+    height: 40px;
+    width: 40px;
+    }
+  
+        }
+  }
+
+
+

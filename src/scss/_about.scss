@@ -1,0 +1,86 @@
+
+@use "variables";
+@use "mixins";
+@use "header";
+@use "footer";
+
+
+ 
+.aboutPage{
+border-top:variables.$border;
+background-size: cover;
+
+
+
+/*   &__bg{
+
+   height: 100vh;
+   width: 100vw;
+ 
+  
+
+&__img{
+    height: 100%;
+    width: 100%;
+}
+}  */
+
+}
+
+.about{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    padding-top: 1rem;
+
+
+    
+   @include mixins.laptop {
+    
+
+        }
+
+    &__profile{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+
+        &__img{
+            width: 35%;
+            border: 1px solid #bebebe40;
+
+        }
+   
+    }
+
+    &__title{
+        margin-bottom: 1rem;
+      
+    }
+
+    &__info{
+       // width: 80vw;
+        height: auto;
+        padding: 1.5rem;
+        margin-left: 2rem;
+
+        &__text{
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        text-align: center;
+        line-height: 1.5rem;
+          
+        }
+    }
+   
+} 
+
+
+
+

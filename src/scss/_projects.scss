@@ -1,0 +1,204 @@
+@use "variables";
+@use "mixins";
+@use "header";
+@use "footer";
+
+
+.projectPage{    
+
+    border-top:variables.$border;
+    position: relative;
+    
+/*     &__bg{
+    
+       height: 100vh;
+       width: 100vw; 
+    
+    &__img{
+        height: 100%;
+        
+        width: 100%;
+    }
+    }  */
+    
+    }
+
+
+    a{
+        text-decoration: none;
+        color: variables.$secondary-color;
+    }
+
+    .projectContent{
+     
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+        padding-top: 1rem;
+        
+    }
+
+
+    .intro__text{
+        padding: 2rem;
+    }
+
+
+    .skillsSection{
+
+        border-top:variables.$border;
+        width: 100%;
+        padding-top: 1rem;
+
+    }
+    .skills{
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+
+    
+        &__icons{
+            padding: 0.2rem;
+            font-size: 2rem;
+
+            @include mixins.tablet {
+                padding: 0.3rem;
+
+
+            }
+
+            
+        }
+
+        &__icons:hover{
+            color:variables.$red;
+        }
+
+ 
+        &__git{
+        background-color: black;
+        color: white;
+        clip-path: polygon(49% 1%, 100% 47%, 49% 93%, 1% 47%);
+
+       
+       }  
+    }
+    
+    .projects{
+        width: 250px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        border: variables.$border;
+        margin-bottom: 1.5rem;
+
+        @include mixins.tablet {
+            width: 350px;
+            height: 500px;
+        }
+
+        @include mixins.laptop {
+
+            width: 450px;
+            height: 600px;
+        }
+        
+        @include mixins.desktop {
+      
+      
+        }
+      
+      
+        &__img{
+
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+           // object-fit:cover;
+            border-radius: 12px;
+        }
+
+
+        &__info{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            position: absolute;
+            background: variables.$primary-color;
+            border-radius: 9px;
+            color: variables.$secondary-color;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 2s;
+
+        &__title{
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 800;
+        }
+        
+
+            &__text{
+
+        font-size: 16px;
+        line-height: 25px;
+
+            }
+
+
+            &__skills{
+                
+        font-size: 16px;
+            }
+
+
+         &__links{
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+
+        &__sites{
+
+          @include mixins.buttons;
+          margin: 0.5rem;
+          margin-top: 1rem;
+          width: 3.5rem;
+          font-size: 14px;
+          padding: 0.2rem;
+
+          &:hover{
+            background-color:variables.$red;
+            color: variables.$secondary-color;
+      
+      }
+      
+            :active{
+              color: variables.$secondary-color;
+      }
+
+        }
+
+            }
+
+
+        
+        }
+
+
+
+
+
+    
+    }
+
+    .projects:hover .projects__info{
+        right: 0;
+    }

@@ -1,0 +1,53 @@
+@use "variables";
+@use "mixins";
+@use "header";
+@use "footer";
+
+
+.contactPage{
+  
+    border-top:variables.$border;
+    position: relative;}
+
+
+.contact{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+
+ 
+    &__bg{
+     width: 80vw;
+     margin-left: 1rem;
+     margin-top: 2rem;
+
+
+     &__img{
+        width: 100%;
+        height: auto;
+    
+
+     }
+    }
+
+    &__btn{
+         @include mixins.buttons;
+
+        &__link{
+          color: variables.$secondary-color;
+          text-decoration: none;
+        }
+    }
+
+    
+    &__btn:hover{
+        background-color:variables.$red;
+
+
+   
+      }
+}

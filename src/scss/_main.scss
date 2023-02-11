@@ -1,0 +1,145 @@
+
+@use "variables";
+@use "mixins";
+@use "header";
+@use "theme";
+@use "about";
+@use "projects";
+@use "contact";
+@use "footer"; 
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+
+}
+
+body, html{
+  order:1px solid variables.$secondary-color;
+  text-align: center;
+  font-family: 'Roboto','Oxygen Mono', monospace,'Times New Roman', Times, sans-serif, serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+
+
+html {
+  font-size: 1rem;
+
+  @include mixins.tablet {
+    font-size: 1.5rem;
+   }
+
+   @include mixins.laptop {
+font-size: 1.7rem;  
+    }
+    @include mixins.desktop {
+      font-size: 2rem;  
+          }
+
+}
+
+
+.mainPage{
+  height: 100vh;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+
+
+  @include mixins.laptop {
+    flex-direction: row-reverse;
+   }
+ 
+
+
+  &__intro{
+
+    &__text{
+      height: 200px;
+      width: 50vw;
+      text-align: center;
+      white-space: pre-line;
+
+      @include mixins.laptop {
+        width: 35vw;
+      
+        }
+
+    }
+
+
+    &__text::after {
+      content: '|';
+      animation: blink 0.9s infinite;
+      
+      color:variables.$purple;
+    }
+
+    
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  
+  &__hero{
+
+    width: 80vw;
+    margin-left: 2rem;
+
+    
+  @include mixins.laptop {
+  margin-left: 0;
+
+  }
+
+    &__img{
+    width: 100%;
+    height: auto;
+
+    }
+
+
+
+
+  }
+
+
+  &__moreInfo__btn{
+
+    @include mixins.buttons;
+
+        @include mixins.laptop {
+         margin-top: 0;
+         margin-right: 2rem;
+        
+        }
+      &:hover{
+      background-color:variables.$red;
+      color: variables.$secondary-color;
+
+}
+
+      :active{
+        color: variables.$secondary-color;
+}
+  }
+}
+
+
+  
