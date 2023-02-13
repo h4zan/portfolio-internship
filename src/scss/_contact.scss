@@ -29,6 +29,10 @@
      &__img{
         width: 100%;
         height: auto;
+
+        @include mixins.desktop{
+          width: 80%
+        }
     
 
      }

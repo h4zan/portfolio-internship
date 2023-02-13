@@ -85,14 +85,25 @@ display: inline-block;
   }
 
   @include mixins.tablet{
-    height: 2px;
+
+    
+    width: 2rem;
+    height: 3px;
+
+    &:nth-of-type(2) {
+      margin-top: 9px;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 9px;
+    }
 
   }
 
   @include mixins.laptop{
   
     width: 1.5rem;
-    height: 2.5px;
+    height: 2px;
     &:nth-of-type(2) {
       margin-top: 9px;
     }
@@ -104,14 +115,14 @@ display: inline-block;
   }
   @include mixins.desktop{
   
-    width: 1.5rem;
-    height: 1.7px;
+    width: 2rem;
+    height: 3px;
       
     &:nth-of-type(2) {
-      margin-top: 9px;
+      margin-top: 11px;
     }
     &:nth-of-type(3) {
-      margin-top: 11px;
+      margin-top: 13px;
     }
   
   
@@ -147,14 +158,21 @@ display: inline-block;
     transform: translateY(-5px) translateX(0) rotate(-45deg);
     background:variables.$secondary-color;
 
+
+    @include mixins.tablet{
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+
+
+    }
+
     @include mixins.laptop{
-      transform: translateY(-10px) translateX(0) rotate(-45deg);
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
 
 
     }
 
     @include mixins.desktop{
-      transform: translateY(-12px) translateX(0) rotate(-45deg);
+      transform: translateY(-17px) translateX(0) rotate(-45deg);
 
 
     }
@@ -200,7 +218,11 @@ display: inline-block;
   text-align: center;
 
   
-  
+  @include mixins.tablet {
+    top: 320px;
+
+   
+   }
    @include mixins.laptop {
     position: relative;
      top: 0;
@@ -212,6 +234,8 @@ display: inline-block;
     top: 0;
     transform: translateY(0%); 
    }
+
+
   &__ul{
 
     list-style: none;
@@ -248,7 +272,6 @@ display: inline-block;
 
   &__li{
     display: block;
-   // height: calc(100% / 4);
     position: relative;
     opacity: 0;
 
@@ -269,7 +292,6 @@ display: inline-block;
 
   &__links{
 
-      //  display: block;
         position: relative;
         color: variables.$secondary-color;
         text-decoration: none;
@@ -309,7 +331,6 @@ display: inline-block;
 
 
 .overlay__open{
-  // add opacity if transparency needed .75 
   opacity: 1;
   visibility: visible;
   height: 100%;
