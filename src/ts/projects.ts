@@ -115,7 +115,7 @@ let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement
         `An agile school group project with <a href="https://www.linkedin.com/in/jennie-forsell-18aba0244/" target="_blank">Jennie Forsell<a/> and <a href="https://www.linkedin.com/in/adam-danielsson-589265193/" target="_blank">Adam Danielsson<a/>.`,
         "Typescript, Html, Scss",
         "https://github.com/h4zan/Group_assignment_group_1",
-        "https://github.com/h4zan/Group_assignment_group_1",
+        "../../pages/aurora/index.html",
         ),
     
     new Projects(
@@ -124,7 +124,7 @@ let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement
         "A to-do list app.",
         "Javascript, Html, Scss",
         "https://github.com/h4zan/to-do-list",
-        "https://github.com/h4zan/movies", 
+        "../../pages/todo/index.html", 
     ),
 
     new Projects(
@@ -133,7 +133,7 @@ let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement
         "A movie database based on OMDb API.",
         "Typescript, Html, Scss",
         "https://github.com/h4zan/movies",
-        "https://github.com/h4zan/movies", 
+        "../../pages/movies/index.html", 
     )
     
     
