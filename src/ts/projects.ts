@@ -114,8 +114,7 @@ let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement
         `An agile school group project with <a href="https://www.linkedin.com/in/jennie-forsell-18aba0244/" target="_blank">Jennie Forsell<a/> and <a href="https://www.linkedin.com/in/adam-danielsson-589265193/" target="_blank">Adam Danielsson<a/>.`,
         "Typescript, Html, Scss",
         "https://github.com/h4zan/Group_assignment_group_1",
-       "https://i.postimg.cc/Twmcrpk3/auroraimg.jpg",
-       // "https://page-aurora-shop.netlify.app/",
+        "https://page-aurora-shop.netlify.app/",
         ),
     
     new Projects(
