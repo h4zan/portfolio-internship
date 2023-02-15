@@ -23,11 +23,7 @@ background-size: cover;
     padding-top: 1rem;
 
 
-    
-   @include mixins.laptop {
-    
 
-        }
 
     &__profile{
         width: 100vw;
@@ -42,19 +38,49 @@ background-size: cover;
             width: 35%;
             border: 1px solid #bebebe40;
 
+            @include mixins.laptop {
+                width: 25%;
+    
+            }
+            @include mixins.desktop {
+                width: 20%;
+
+            }
+
         }
    
     }
 
     &__title{
         margin-bottom: 1rem;
+        font-weight: 600;
+
+        
+    @include mixins.laptop {
+        font-size: 1.3rem;
+    }
       
     }
 
     &__info{
         height: auto;
-        padding: 1.5rem;
-        margin-left: 2rem;
+        padding: 2rem;
+       // margin-left: 2rem;
+
+   
+
+    @include mixins.laptop {
+        width: 75%; 
+    
+    
+    }
+    @include mixins.desktop {
+        width: 75%; 
+    
+    
+    }
+
+
 
         &__text{
         overflow-wrap: break-word;
@@ -62,6 +88,16 @@ background-size: cover;
         text-align: center;
         line-height: 1.5rem;
           
+
+        @include mixins.laptop {
+            font-size: 1rem;
+        
+        }
+        
+       @include mixins.desktop {
+        font-size: 1rem;
+    
+    }
         }
     }
    

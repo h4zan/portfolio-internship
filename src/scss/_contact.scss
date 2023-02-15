@@ -17,7 +17,17 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 2rem;
+  padding: 1rem;
+
+  &__title{
+    font-weight: 600;
+    @include mixins.laptop {
+      font-size: 1.3rem;
+      
+   
+   
+   }
+  }
 
  
     &__bg{
@@ -30,12 +40,35 @@
         width: 100%;
         height: auto;
 
+        @include mixins.laptop{
+          width: 75%
+        }
+    
+
         @include mixins.desktop{
-          width: 80%
+          width: 65%
         }
     
 
      }
+    }
+
+
+    &__info{
+      padding: 2rem;
+
+      @include mixins.laptop {
+        font-size: 1rem;
+        width: 80%;
+        
+     }
+
+     @include mixins.desktop {
+      font-size: 1rem;
+      
+   
+   
+   }
     }
 
     &__btn{
@@ -45,6 +78,10 @@
           color: variables.$secondary-color;
           text-decoration: none;
         }
+
+        @include mixins.desktop{
+        margin-top: 0.5rem;        }
+    
     }
 
     

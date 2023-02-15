@@ -105,17 +105,17 @@ createProjects()
 
 
 export function createProjects(){
-
 let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement;
 
-    let projects=[
+     let projects:Projects[]=[
         new Projects(
         "Aurora Jewlery",
-        "https://i.postimg.cc/VL5TXVHM/aurora1.jpg",
+        "https://i.postimg.cc/NfhgKgbd/aurora-shop.jpg",
         `An agile school group project with <a href="https://www.linkedin.com/in/jennie-forsell-18aba0244/" target="_blank">Jennie Forsell<a/> and <a href="https://www.linkedin.com/in/adam-danielsson-589265193/" target="_blank">Adam Danielsson<a/>.`,
         "Typescript, Html, Scss",
         "https://github.com/h4zan/Group_assignment_group_1",
-        "../../pages/aurora/index.html",
+       "https://i.postimg.cc/Twmcrpk3/auroraimg.jpg",
+       // "https://page-aurora-shop.netlify.app/",
         ),
     
     new Projects(
@@ -124,7 +124,7 @@ let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement
         "A to-do list app.",
         "Javascript, Html, Scss",
         "https://github.com/h4zan/to-do-list",
-        "../../pages/todo/index.html", 
+        "https://page-todolist.netlify.app/", 
     ),
 
     new Projects(
@@ -133,9 +133,8 @@ let projectsWrapper=document.querySelector(".projectsWrapper") as HTMLDivElement
         "A movie database based on OMDb API.",
         "Typescript, Html, Scss",
         "https://github.com/h4zan/movies",
-        "../../pages/movies/index.html", 
+        "https://page-movies-api.netlify.app/", 
     )
-    
     
     ]
     

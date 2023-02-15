@@ -29,11 +29,61 @@
     }
 
 
-    .intro__text{
+    .intro{
+
+        &__title{
+            font-weight: 600;
+
+
+            @include mixins.laptop {
+                font-size: 1.3rem;
+                
+             
+             
+             }
+
+            }
+        
+    
+         &__text{
         padding: 2rem;
+
+        @include mixins.laptop {
+           font-size: 1rem;
+           
+        
+        
+        }
+
+        @include mixins.desktop {
+            font-size: 1rem;
+            
+         
+         
+         }
+    }
+
     }
 
 
+    .skillsDisplayed__title{
+
+    font-weight: 600;
+
+    @include mixins.laptop {
+        font-size: 1.5rem;
+        
+     
+     
+     }
+
+     @include mixins.desktop {
+        font-size: 1.2rem;
+        
+     
+     
+     }
+    }
     .skillsSection{
 
         border-top:variables.$border;
@@ -90,7 +140,7 @@
 
         @include mixins.laptop {
 
-            width: 450px;
+            width: 350px;
             height: 600px;
         }
         
@@ -99,7 +149,16 @@
       
         }
       
-      
+      &__title{
+        font-weight: 400;
+
+        @include mixins.laptop {
+            font-size: 1.2rem;
+            
+         
+         
+         }
+      }
         &__img{
 
             width: 100%;
@@ -128,6 +187,13 @@
             text-transform: uppercase;
             font-size: 18px;
             font-weight: 800;
+
+            @include mixins.laptop {
+                font-size: 20px;
+                
+             
+             
+             }
         }
         
 
@@ -135,6 +201,12 @@
 
         font-size: 16px;
         line-height: 25px;
+        @include mixins.laptop {
+            font-size: 18px;
+            
+         
+         
+         }
 
             }
 
@@ -142,6 +214,12 @@
             &__skills{
                 
         font-size: 16px;
+        @include mixins.laptop {
+            font-size: 18px;
+            
+         
+         
+         }
             }
 
 
@@ -162,6 +240,12 @@
           font-size: 14px;
           padding: 0.2rem;
 
+          @include mixins.laptop {
+            font-size: 16px;
+            
+         
+         
+         }
           &:hover{
             background-color:variables.$red;
             color: variables.$secondary-color;

@@ -21,6 +21,7 @@ body, html{
   font-family: 'Roboto','Oxygen Mono', monospace,'Times New Roman', Times, sans-serif, serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-size: 1rem;
 }
 
 
@@ -53,27 +54,47 @@ font-size: 1.7rem;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 2rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
 
 
   @include mixins.laptop {
     flex-direction: row-reverse;
+    //margin-top: 5rem;
    }
- 
+  
 
 
   &__intro{
 
     &__text{
-      height: 200px;
+      height: 150px;
       width: 50vw;
       text-align: center;
       white-space: pre-line;
+      margin-top: 1.5rem;
+      font-weight: 400;
+
+      
+      @include mixins.tablet {
+        
+      
+        }
 
       @include mixins.laptop {
         width: 35vw;
+        margin-top: 1rem;
+        padding: 0.1rem;
+        font-size:0.8rem;
       
         }
+
+        @include mixins.desktop {
+          width: 35vw;
+        margin-top: 2rem;
+        padding: 0.5rem;
+        margin-left: 0.5rem;
+          }
 
     }
 
@@ -102,15 +123,26 @@ font-size: 1.7rem;
     width: 80vw;
     margin-left: 2rem;
 
+  
+
     
-  @include mixins.laptop {
-  margin-left: 0;
-
-  }
-
     &__img{
     width: 100%;
     height: auto;
+
+   
+    @include mixins.laptop {
+      margin-top: -50px;
+      margin-left: 0;
+      width: 100%;
+    
+      }
+      @include mixins.desktop {
+        width: 100%;
+       // margin-top: -20px;
+        margin-left: 0;
+      
+        }
 
     }
 
@@ -125,10 +157,21 @@ font-size: 1.7rem;
     @include mixins.buttons;
 
         @include mixins.laptop {
+          font-size: 0.8rem;
          margin-top: 0;
-         margin-right: 2rem;
+         margin-left: 1rem;
+         padding: 0.3rem;
         
         }
+
+        @include mixins.desktop {
+          margin-left: 0.7rem;
+          padding: 0.4rem;
+         
+         }
+
+
+        
       &:hover{
       background-color:variables.$red;
       color: variables.$secondary-color;

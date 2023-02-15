@@ -6,7 +6,7 @@ export class Projects{
         public projectInfo: string,
         public projectSkills: string,
         public projectOnGithub:string,
-        public projectLive:string,
+        public projectLive:string
         )
         {}
 }
